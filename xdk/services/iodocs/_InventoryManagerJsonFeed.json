@@ -1,0 +1,23 @@
+{
+"endpoints": [
+  {
+    "name": "Get Part Info",
+    "dashboardUrl": "http://10.0.0.61",
+    "methods": [
+      {
+        "MethodName": "partInfoByCiId",
+        "Synopsis": "Grabs the part information based on a scanned barcode",
+        "parameters": [
+          {
+            "Name": "CiId",
+            "Required": "Y",
+            "Default": "",
+            "Type": "string",
+            "Description": "The Current Inventory Id"
+          }
+        ]
+      }
+    ]
+  }
+]
+}

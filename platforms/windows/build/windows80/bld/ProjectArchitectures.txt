@@ -1,0 +1,1 @@
+C:\Users\Tyler\Documents\GitHub\InvManNodeApp\platforms\windows\CordovaApp.Windows80.jsproj;neutral

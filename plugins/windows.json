@@ -1,0 +1,17 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "InventoryManager"
+        },
+        "org.apache.cordova.device": {},
+        "org.apache.cordova.splashscreen": {}
+    },
+    "dependent_plugins": {}
+}

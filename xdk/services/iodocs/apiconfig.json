@@ -1,0 +1,7 @@
+{
+  "_InventoryManagerJsonFeed": {
+    "name": "Inventory Manager Json Feed",
+    "description": "Ties to Inventory Manager",
+    "dashboardUrl": "http://10.0.0.61/"
+  }
+}

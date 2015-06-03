@@ -1,0 +1,12 @@
+C:\Users\Tyler\Documents\GitHub\InvManNodeApp\platforms\windows\build\windows80\Debug\AnyCPU\resources.pri
+C:\Users\Tyler\Documents\GitHub\InvManNodeApp\platforms\windows\build\windows80\Debug\AnyCPU\AppxManifest.xml
+C:\Users\Tyler\Documents\GitHub\InvManNodeApp\platforms\windows\build\windows80\bld\priconfig.xml.intermediate
+C:\Users\Tyler\Documents\GitHub\InvManNodeApp\platforms\windows\build\windows80\bld\layout.resfiles.intermediate
+C:\Users\Tyler\Documents\GitHub\InvManNodeApp\platforms\windows\build\windows80\bld\resources.resfiles.intermediate
+C:\Users\Tyler\Documents\GitHub\InvManNodeApp\platforms\windows\build\windows80\bld\pri.resfiles.intermediate
+C:\Users\Tyler\Documents\GitHub\InvManNodeApp\platforms\windows\build\windows80\bld\priconfig.xml
+C:\Users\Tyler\Documents\GitHub\InvManNodeApp\platforms\windows\build\windows80\bld\layout.resfiles
+C:\Users\Tyler\Documents\GitHub\InvManNodeApp\platforms\windows\build\windows80\bld\resources.resfiles
+C:\Users\Tyler\Documents\GitHub\InvManNodeApp\platforms\windows\build\windows80\bld\pri.resfiles
+C:\Users\Tyler\Documents\GitHub\InvManNodeApp\platforms\windows\build\windows80\bld\LanguageQualifiers.txt
+C:\Users\Tyler\Documents\GitHub\InvManNodeApp\platforms\windows\build\windows80\bld\ProjectArchitectures.txt
