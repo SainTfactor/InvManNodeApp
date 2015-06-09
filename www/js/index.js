@@ -19,7 +19,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        intel.xdk.device.hideSplashScreen();
+        //intel.xdk.device.hideSplashScreen();
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -44,12 +44,48 @@ var app = {
     // Update DOM on a Received Event
     searchClick: function() {
         $("#ResultsBox").html("Waiting...");
-        app.runAjax();
+        
+        console.log("onetwothree");
+        
+        //cordova.plugins.barcodeScanner.scan(
+        var scanner;
+        try
+        {            
+            //scanner = cordova.require("cordova/plugin/BarcodeScanner");
+            //scanner = cordova.require("com.phonegap.plugins.barcodescanner.BarcodeScanner");
+            scanner = cordova.require("cordova/plugin/BarcodeScanner");            
+        }
+        catch(err)
+        {
+            alert(err);
+        }
+        
+        scanner.scan(
+            function (result) {
+                app.runAjax(result.text, $("#targetIP").val());
+                /*alert(result);
+                alert("We got a barcode\n" +
+                      "Result: " + result.text + "\n" +
+                      "Format: " + result.format + "\n" +
+                      "Cancelled: " + result.cancelled);*/
+            }, 
+            function (error) {
+                alert("Scanning failed: " + error);
+            }
+        );
+        
+        
+        
+        $("#ResultsBox").html("Waiting...");
+        //app.runAjax($("#searchBox").val() == "" ? 1001 : $("#searchBox").val());
     },
-    runAjax: function(id){
-        var ciid = $("#searchBox").val() == "" ? 1001 : $("#searchBox").val();
-        intel.xdk.services.iodocs_._InventoryManagerJsonFeed.partInfoByCiId({"CiId":ciid}).success(function(data){
+    runAjax: function(id, iptarg){
+        var ciid = id;
+        var ip = iptarg;
+        intel.xdk.services.iodocs_._InventoryManagerJsonFeed.partInfoByCiId({"CiId":ciid, "TargetServer": ip}).success(function(data){
             $("#ResultsBox").html(data.item_cd + ", " + data.item_nm);
+        }).error(function(){        
+            $("#ResultsBox").html("Error - your connection to the server failed.<br />Make sure you are connected to the internet and try again");
         });
         //alert( partInfoByCiId(1001));
     }

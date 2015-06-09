@@ -14,6 +14,13 @@
             "Default": "",
             "Type": "string",
             "Description": "The Current Inventory Id"
+          },
+          {
+            "Name": "TargetServer",
+            "Required": "Y",
+            "Default": "",
+            "Type": "string",
+            "Description": "The Target Server Name/IP Address (Including the '/inventorymanager' part of the target)"
           }
         ]
       }

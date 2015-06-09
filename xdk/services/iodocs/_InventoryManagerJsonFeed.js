@@ -3,7 +3,7 @@
   
   /* Data Feed Function */
   exports.partInfoByCiId = function (params) {
-    var url = 'http://10.0.0.61/invman/json/PartByCiId?ciId=' + params.CiId;
+    var url = 'http://' + params.TargetServer + '/json/PartByCiId?ciId=' + params.CiId;
     return $.ajax({url: url});
   };
     

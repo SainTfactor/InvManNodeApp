@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "2fcfb202-ee15-4e83-825b-7edc60e1e4e9",
-      "lastModifiedDate": 1433303427455,
+      "lastModifiedDate": 1433817972073,
       "creationDate": 1433285718138
     },
     "sourceDirectory": "www",
@@ -51,6 +51,20 @@
         "paramvals": {},
         "dependsOn": [],
         "dependedBy": []
+      },
+      {
+        "id": "com.phonegap.plugins.barcodescanner",
+        "version": "",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": [],
+        "custom": "true",
+        "name": "BarcodeScanner",
+        "origin": "com.phonegap.plugins.barcodescanner",
+        "originType": "cordova.io",
+        "sourceLocation": ""
       }
     ],
     "serviceMethods": [
@@ -111,7 +125,8 @@
           "namespace": "intel.xdk.services."
         },
         "parameters": {
-          "CiId": "1001"
+          "CiId": "1001",
+          "TargetServer": "10.0.0.29/InvMan"
         },
         "requiredLibraries": [
           "xhr.js",
@@ -128,7 +143,8 @@
         "preferences_": {
           "android-minSdkVersion": "10",
           "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
+          "android-installLocation": "auto",
+          "Orientation": "portrait"
         },
         "isActive_": true,
         "appName_": "InvManNodeApp",
@@ -138,7 +154,32 @@
             "origin": "*"
           }
         ],
-        "icons_": [],
+        "icons_": [
+          {
+            "relPath": "img/icon-ldpi.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "img/icon-mdpi.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "img/icon-hdpi.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "img/icon-xhdpi.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",

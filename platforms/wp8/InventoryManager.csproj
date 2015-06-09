@@ -217,4 +217,8 @@
         <PostBuildEvent>
         </PostBuildEvent>
     </PropertyGroup>
+    <ItemGroup />
+    <ItemGroup />
+    <ItemGroup />
+    <ItemGroup />
 </Project>
