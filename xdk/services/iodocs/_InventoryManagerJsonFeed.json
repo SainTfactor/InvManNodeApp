@@ -23,7 +23,34 @@
             "Description": "The Target Server Name/IP Address (Including the '/inventorymanager' part of the target)"
           }
         ]
-      }
+      },
+        {
+            "MethodName": "logCompareRecord",
+            "Synopsis": "sends a record to the server saying that a comparison was done",
+            "parameters": [
+                {
+                    "Name": "CiId1",
+                    "Required": "Y",
+                    "Default": "",
+                    "Type": "string",
+                    "Description": "The Inventory ID of the first barcode scanned."
+                },
+                {
+                    "Name": "CiId2",
+                    "Required": "Y",
+                    "Default": "",
+                    "Type": "string",
+                    "Description": "The Inventory ID of the second barcode scanned."
+                },
+                {
+                    "Name": "Match",
+                    "Required": "Y",
+                    "Default": "",
+                    "Type": "boolean",
+                    "Description": "Whether the two barcodes matched."
+                }
+            ]
+        }
     ]
   }
 ]

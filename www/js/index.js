@@ -29,6 +29,7 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         $("#searchButton")[0].addEventListener("click", this.searchClick, false);
+        document.getElementById('compareButton').addEventListener('click', this.compareClick ,false);
     },
     // deviceready Event Handler
     //
@@ -36,6 +37,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        //.addEventListener('click', this.compareClick, false);
+        
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -53,7 +56,7 @@ var app = {
         {            
             //scanner = cordova.require("cordova/plugin/BarcodeScanner");
             //scanner = cordova.require("com.phonegap.plugins.barcodescanner.BarcodeScanner");
-            scanner = cordova.require("cordova/plugin/BarcodeScanner");            
+            scanner = cordova.require("cordova/plugin/BarcodeScanner");     
         }
         catch(err)
         {
@@ -78,6 +81,42 @@ var app = {
         
         $("#ResultsBox").html("Waiting...");
         //app.runAjax($("#searchBox").val() == "" ? 1001 : $("#searchBox").val());
+    },
+    // Update DOM on a Received Event
+    compareClick: function() {
+        var barcode1 = '';
+        var barcode2 = '';
+        try {          
+            scanner = cordova.require("cordova/plugin/BarcodeScanner");     
+        }
+        catch(err) {
+            alert(err);
+        }
+        scanner.scan(
+            function (result) {
+                barcode1 = result.text 
+                if (confirm('Move onto the next scan?')) {
+                    scanner.scan(
+                        function (result) {
+                            barcode2 = result.text
+                            if (barcode1 == barcode2) {
+                                alert('They match\nBarcode1: ' + barcode1 + "\nBarcode2: " + barcode2);
+                            }
+                            else {
+                                alert('they dont match');
+                            }
+                        },
+                        function (error) {
+                            alert("Scanning failed: " + error);
+                        }
+                    );
+                }
+            },
+            function (error) {
+                alert("Scanning failed: " + error);
+            }
+        );
+
     },
     runAjax: function(id, iptarg){
         var ciid = id;
