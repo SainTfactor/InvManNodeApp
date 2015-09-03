@@ -86,6 +86,8 @@ var app = {
     compareClick: function() {
         var barcode1 = '';
         var barcode2 = '';
+        var part1;
+        var part2;
         try {          
             scanner = cordova.require("cordova/plugin/BarcodeScanner");     
         }
@@ -123,6 +125,7 @@ var app = {
         var ip = iptarg;
         intel.xdk.services.iodocs_._InventoryManagerJsonFeed.partInfoByCiId({"CiId":ciid, "TargetServer": ip}).success(function(data){
             $("#ResultsBox").html(data.item_cd + ", " + data.item_nm);
+            part1 = data;
         }).error(function(){        
             $("#ResultsBox").html("Error - your connection to the server failed.<br />Make sure you are connected to the internet and try again");
         });
