@@ -12,9 +12,8 @@
         return $.ajax({
             url: url,
             data: {
-                "CiId1": params.ciID1,
-                "CiId2": params.ciID2,
-                "Match": params.match
+                "barcode1": params.barcode1,
+                "barcode2": params.barcode2
             }
         });
     }

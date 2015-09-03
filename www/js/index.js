@@ -86,8 +86,6 @@ var app = {
     compareClick: function() {
         var barcode1 = '';
         var barcode2 = '';
-        var part1;
-        var part2;
         try {          
             scanner = cordova.require("cordova/plugin/BarcodeScanner");     
         }
@@ -101,12 +99,7 @@ var app = {
                     scanner.scan(
                         function (result) {
                             barcode2 = result.text
-                            if (barcode1 == barcode2) {
-                                alert('They match\nBarcode1: ' + barcode1 + "\nBarcode2: " + barcode2);
-                            }
-                            else {
-                                alert('they dont match');
-                            }
+                            app.runAjaxCompare(barcode1, barcode2, $("#targetIP").val());
                         },
                         function (error) {
                             alert("Scanning failed: " + error);
@@ -125,7 +118,19 @@ var app = {
         var ip = iptarg;
         intel.xdk.services.iodocs_._InventoryManagerJsonFeed.partInfoByCiId({"CiId":ciid, "TargetServer": ip}).success(function(data){
             $("#ResultsBox").html(data.item_cd + ", " + data.item_nm);
-            part1 = data;
+        }).error(function(){        
+            $("#ResultsBox").html("Error - your connection to the server failed.<br />Make sure you are connected to the internet and try again");
+        });
+        //alert( partInfoByCiId(1001));
+    },
+    runAjaxCompare: function(barcode1, barcode2 iptarg){
+        var ip = iptarg;
+        intel.xdk.services.iodocs_._InventoryManagerJsonFeed.logCompareRecord({
+            "barcode1": barcode1,
+            "barcode2": barcode2, 
+            "TargetServer": ip
+        }).success(function(data){
+            $("#ResultsBox").html((data.match) ? "The barcodes match." : "The barcodes don't match.");
         }).error(function(){        
             $("#ResultsBox").html("Error - your connection to the server failed.<br />Make sure you are connected to the internet and try again");
         });
