@@ -29,25 +29,18 @@
             "Synopsis": "sends a record to the server saying that a comparison was done",
             "parameters": [
                 {
-                    "Name": "CiId1",
+                    "Name": "barcode1",
                     "Required": "Y",
                     "Default": "",
                     "Type": "string",
-                    "Description": "The Inventory ID of the first barcode scanned."
+                    "Description": "first barcode scanned."
                 },
                 {
-                    "Name": "CiId2",
+                    "Name": "barcode2",
                     "Required": "Y",
                     "Default": "",
                     "Type": "string",
-                    "Description": "The Inventory ID of the second barcode scanned."
-                },
-                {
-                    "Name": "Match",
-                    "Required": "Y",
-                    "Default": "",
-                    "Type": "boolean",
-                    "Description": "Whether the two barcodes matched."
+                    "Description": "second barcode scanned."
                 }
             ]
         }
