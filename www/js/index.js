@@ -29,7 +29,7 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         $("#searchButton")[0].addEventListener("click", this.searchClick, false);
-        document.getElementById('compareButton').addEventListener('click', this.compareClick ,false);
+        $('#compareButton')[0].addEventListener('click', this.compareClick ,false);
     },
     // deviceready Event Handler
     //
@@ -47,9 +47,7 @@ var app = {
     // Update DOM on a Received Event
     searchClick: function() {
         $("#ResultsBox").html("Waiting...");
-        
-        console.log("onetwothree");
-        
+                
         //cordova.plugins.barcodeScanner.scan(
         var scanner;
         try
@@ -60,7 +58,7 @@ var app = {
         }
         catch(err)
         {
-            alert(err);
+            window.alert(err);
         }
         
         scanner.scan(
@@ -73,7 +71,7 @@ var app = {
                       "Cancelled: " + result.cancelled);*/
             }, 
             function (error) {
-                alert("Scanning failed: " + error);
+                window.alert("Scanning failed: " + error);
             }
         );
         
@@ -90,25 +88,25 @@ var app = {
             scanner = cordova.require("cordova/plugin/BarcodeScanner");     
         }
         catch(err) {
-            alert(err);
+            window.alert(err);
         }
         scanner.scan(
             function (result) {
-                barcode1 = result.text 
+                barcode1 = result.text;
                 if (confirm('Move onto the next scan?')) {
                     scanner.scan(
                         function (result) {
-                            barcode2 = result.text
+                            barcode2 = result.text;
                             app.runAjaxCompare(barcode1, barcode2, $("#targetIP").val());
                         },
                         function (error) {
-                            alert("Scanning failed: " + error);
+                            window.alert("Scanning failed: " + error);
                         }
                     );
                 }
             },
             function (error) {
-                alert("Scanning failed: " + error);
+                window.alert("Scanning failed: " + error);
             }
         );
 
@@ -123,7 +121,7 @@ var app = {
         });
         //alert( partInfoByCiId(1001));
     },
-    runAjaxCompare: function(barcode1, barcode2 iptarg){
+    runAjaxCompare: function(barcode1, barcode2, iptarg){
         var ip = iptarg;
         intel.xdk.services.iodocs_._InventoryManagerJsonFeed.logCompareRecord({
             "barcode1": barcode1,
