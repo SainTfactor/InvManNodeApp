@@ -9,13 +9,14 @@
     
     exports.logCompareRecord = function(params) {
         var url = 'http://' + params.TargetServer + '/json/LogCompareRecord';
+        alert("two");
         return $.ajax({
             url: url,
             data: {
-                "barcode1": params.barcode1,
-                "barcode2": params.barcode2
+                barcode1: params.barcode1,
+                barcode2: params.barcode2
             }
         });
-    }
+    };
     return exports;
 })

@@ -30,6 +30,8 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         $("#searchButton")[0].addEventListener("click", this.searchClick, false);
         $('#compareButton')[0].addEventListener('click', this.compareClick ,false);
+        
+        
     },
     // deviceready Event Handler
     //
@@ -37,6 +39,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+                
         //.addEventListener('click', this.compareClick, false);
         
     },
@@ -97,8 +100,18 @@ var app = {
                     scanner.scan(
                         function (result) {
                             barcode2 = result.text;
-                            app.runAjaxCompare(barcode1, barcode2, $("#targetIP").val());
-                            alert('They match!');
+                            
+                            $.ajax({
+                                 url: 'http://' + $("#targetIP").val() + '/json/LogCompareRecord',
+                                 data: {
+                                     barcode1: barcode1,
+                                     barcode2: barcode2
+                                 }
+                             }).success(function(data){
+                                alert((data.match) ? "Success" : "FAILURE PART MISMATCH!");
+                             }).error(function(data){
+                                $("#ResultsBox").html("Error - your connection to the server failed.<br />Make sure you are connected to the internet and try again");
+                             });
                         },
                         function (error) {
                             window.alert("Scanning failed: " + error);
@@ -124,15 +137,20 @@ var app = {
     },
     runAjaxCompare: function(barcode1, barcode2, iptarg){
         var ip = iptarg;
+        alert(barcode1);        
+        alert(barcode2);
+        alert(ip);
+        alert("one");
         intel.xdk.services.iodocs_._InventoryManagerJsonFeed.logCompareRecord({
             "barcode1": barcode1,
             "barcode2": barcode2, 
             "TargetServer": ip
         }).success(function(data){
-            $("#ResultsBox").html((data.match) ? "The barcodes match." : "The barcodes don't match.");
+            alert("three")
+            
         }).error(function(){        
-            $("#ResultsBox").html("Error - your connection to the server failed.<br />Make sure you are connected to the internet and try again");
-        });
+            
+        }).done(function(data){ alert("four"); });
         //alert( partInfoByCiId(1001));
     }
 };

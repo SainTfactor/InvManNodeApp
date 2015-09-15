@@ -6,7 +6,7 @@
     "projectFiles": {},
     "projectDirectories": {},
     "currentService": {
-      "methodapi": "partInfoByCiId",
+      "methodapi": "logCompareRecord",
       "endPoint": "Get-Part-Info",
       "service": "_InventoryManagerJsonFeed"
     }

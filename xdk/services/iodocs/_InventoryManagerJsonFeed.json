@@ -41,6 +41,13 @@
                     "Default": "",
                     "Type": "string",
                     "Description": "second barcode scanned."
+                },
+                {
+                    "Name": "TargetServer",
+                    "Required": "Y",
+                    "Default": "",
+                    "Type": "string",
+                    "Description": "The Target Server Name/IP Address (Including the '/inventorymanager' part of the target)"
                 }
             ]
         }

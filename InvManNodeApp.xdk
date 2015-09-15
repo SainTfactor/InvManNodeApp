@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "2fcfb202-ee15-4e83-825b-7edc60e1e4e9",
-      "lastModifiedDate": 1442321247576,
+      "lastModifiedDate": 1442360572198,
       "creationDate": 1433285718138
     },
     "sourceDirectory": "www",
@@ -69,64 +69,25 @@
     ],
     "serviceMethods": [
       {
-        "methodName": "_InventoryManagerJsonFeedpartInfoByCiId",
+        "methodName": "_InventoryManagerJsonFeedlogCompareRecord",
         "serviceName": "_InventoryManagerJsonFeed",
         "resultType": "object",
         "selectedPaths": {
-          ".item_in_cd": "number",
-          ".item_cd": "string",
-          ".item_nm": "string"
+          ".match": "boolean"
         },
         "cachedResult": {
-          "item_in_cd": 43,
-          "item_cd": "29112-3Q200",
-          "item_nm": "INSULATOR-UNDER COVER,LH",
-          "unit_cd": "Z100100",
-          "sale_chk": "0",
-          "purch_chk": "1",
-          "stock_chk": null,
-          "supply_ty": "H300500",
-          "sale_ty": null,
-          "item_grp": null,
-          "item_ty": "H910B3",
-          "mana1_cd": null,
-          "mana2_cd": null,
-          "mana3_cd": null,
-          "spec": null,
-          "spec1": null,
-          "spec2": null,
-          "spec3": null,
-          "spec4": null,
-          "weight": 0.105,
-          "length": null,
-          "diameter": null,
-          "thick": null,
-          "width": null,
-          "fr_dt": null,
-          "to_dt": null,
-          "draw_no": null,
-          "old_item": null,
-          "main_item": null,
-          "devel_uid": null,
-          "rmk": null,
-          "reg_uid": 3501,
-          "reg_dt": "/Date(1298142805040)/",
-          "end_ty": null,
-          "mana4_cd": null,
-          "mana5_cd": null,
-          "spec5": null,
-          "matter": null,
-          "cbm": 0.002627
+          "match": false
         },
         "codeGenerationParams": {
           "apiName": "_InventoryManagerJsonFeed",
           "endpointName": "Get Part Info",
-          "methodName": "partInfoByCiId",
+          "methodName": "logCompareRecord",
           "namespace": "intel.xdk.services."
         },
         "parameters": {
-          "CiId": "1001",
-          "TargetServer": "10.0.0.29/InvMan"
+          "barcode1": "100",
+          "barcode2": "2000",
+          "TargetServer": "66.184.253.162/InventoryManager"
         },
         "requiredLibraries": [
           "xhr.js",
