@@ -98,6 +98,7 @@ var app = {
                         function (result) {
                             barcode2 = result.text;
                             app.runAjaxCompare(barcode1, barcode2, $("#targetIP").val());
+                            alert('They match!');
                         },
                         function (error) {
                             window.alert("Scanning failed: " + error);
