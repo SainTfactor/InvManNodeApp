@@ -11,9 +11,9 @@
 <icon platform="android" src="img/icon-mdpi.png" density="mdpi" width="48" height="48"/>
 <icon platform="android" src="img/icon-hdpi.png" density="hdpi" width="72" height="72"/>
 <icon platform="android" src="img/icon-xhdpi.png" density="xhdpi" width="96" height="96"/>
-<intelxdk:plugin intelxdk:name="Device" intelxdk:value="org.apache.cordova.device" intelxdk:version="0.2.13"/>
-<intelxdk:plugin intelxdk:name="SplashScreen" intelxdk:value="org.apache.cordova.splashscreen" intelxdk:version="0.3.5"/>
-<intelxdk:plugin intelxdk:name="BarcodeScanner" intelxdk:value="com.phonegap.plugins.barcodescanner"/>
+<intelxdk:plugin intelxdk:name="Device" intelxdk:value="org.apache.cordova.device" intelxdk:version="0.2.13" intelxdk:checksum="87180a02" intelxdk:type="file"/>
+<intelxdk:plugin intelxdk:name="Splashscreen" intelxdk:value="org.apache.cordova.splashscreen" intelxdk:version="0.3.5" intelxdk:checksum="ae76b446" intelxdk:type="file"/>
+<intelxdk:plugin intelxdk:name="BarcodeScanner" intelxdk:value="com.phonegap.plugins.barcodescanner" intelxdk:version="2.0.1" intelxdk:checksum="44bffb40" intelxdk:type="file"/>
 <preference name="android-minSdkVersion" value="10"/>
 <preference name="android-targetSdkVersion" value="19"/>
 <preference name="android-installLocation" value="auto"/>

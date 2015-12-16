@@ -18,9 +18,7 @@
         }
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "{c564faf0-04d6-11e5-ab82-cff75da59c71}"
-        }
+        "com.phonegap.plugins.barcodescanner": {}
     },
     "dependent_plugins": {}
 }

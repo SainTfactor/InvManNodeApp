@@ -1,0 +1,300 @@
+{
+  "project": {
+    "projectSettingsVersion": "1.2",
+    "creationData": {
+      "type": "Import",
+      "projectTypeName": "com.intel.xdk.projecttype.jsapp",
+      "src": "",
+      "projectGuid": "2fcfb202-ee15-4e83-825b-7edc60e1e4e9",
+      "lastModifiedDate": 1442360572198,
+      "creationDate": 1433285718138
+    },
+    "sourceDirectory": "www",
+    "cordovaPluginsDirectory": "plugins",
+    "gameAssetDirectory": "asset",
+    "gameMetadata": {},
+    "startFile": "index.html",
+    "projectTags": [],
+    "projectFiles": {},
+    "projectDirectories": {
+      "xdk/services/iodocs": {
+        "settings": {
+          "project": {
+            "XDK-generated": "true"
+          }
+        }
+      },
+      "www/xdk/services": {
+        "settings": {
+          "project": {
+            "XDK-generated": "true"
+          }
+        }
+      }
+    },
+    "libraries": [],
+    "cordovaPlugins": [
+      {
+        "id": "org.apache.cordova.device",
+        "version": "0.2.13",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": []
+      },
+      {
+        "id": "org.apache.cordova.splashscreen",
+        "version": "0.3.5",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": []
+      },
+      {
+        "id": "com.phonegap.plugins.barcodescanner",
+        "version": "",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": [],
+        "custom": "true",
+        "name": "BarcodeScanner",
+        "origin": "com.phonegap.plugins.barcodescanner",
+        "originType": "cordova.io",
+        "sourceLocation": ""
+      }
+    ],
+    "serviceMethods": [
+      {
+        "methodName": "_InventoryManagerJsonFeedlogCompareRecord",
+        "serviceName": "_InventoryManagerJsonFeed",
+        "resultType": "object",
+        "selectedPaths": {
+          ".match": "boolean"
+        },
+        "cachedResult": {
+          "match": false
+        },
+        "codeGenerationParams": {
+          "apiName": "_InventoryManagerJsonFeed",
+          "endpointName": "Get Part Info",
+          "methodName": "logCompareRecord",
+          "namespace": "intel.xdk.services."
+        },
+        "parameters": {
+          "barcode1": "100",
+          "barcode2": "2000",
+          "TargetServer": "66.184.253.162/InventoryManager"
+        },
+        "requiredLibraries": [
+          "xhr.js",
+          "xdk/services/service-credentials.js",
+          "xdk/services/service-methods.js"
+        ]
+      }
+    ],
+    "buildConfigurations": {
+      "Android": {
+        "platform_": "android",
+        "runtime_": "Cordova 3.x",
+        "name_": "Android",
+        "preferences_": {
+          "android-minSdkVersion": "10",
+          "android-targetSdkVersion": "19",
+          "android-installLocation": "auto",
+          "Orientation": "portrait"
+        },
+        "isActive_": true,
+        "appName_": "InvManNodeApp",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [
+          {
+            "relPath": "img/icon-ldpi.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "img/icon-mdpi.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "img/icon-hdpi.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "img/icon-xhdpi.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1",
+        "appVersionCode_": "1",
+        "crosswalkVersion_": "11",
+        "cordovaCLIVersion_": "4.1.2"
+      },
+      "Android-Crosswalk": {
+        "platform_": "android",
+        "runtime_": "Crosswalk with Cordova 3.x",
+        "name_": "Android-Crosswalk",
+        "preferences_": {
+          "android-minSdkVersion": "14",
+          "android-targetSdkVersion": "19",
+          "android-installLocation": "auto"
+        },
+        "isActive_": true,
+        "appName_": "InvManNodeApp",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1",
+        "appVersionCode_": "1",
+        "crosswalkVersion_": "11",
+        "cordovaCLIVersion_": "4.1.2"
+      },
+      "iOS": {
+        "platform_": "ios",
+        "runtime_": "Cordova 3.x",
+        "name_": "iOS",
+        "preferences_": {
+          "ios-target": "6",
+          "ios-configuration": "adhoc"
+        },
+        "isActive_": true,
+        "appName_": "InvManNodeApp",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1",
+        "cordovaCLIVersion_": "4.1.2",
+        "iosProvs_": []
+      },
+      "Windows8": {
+        "platform_": "windows8",
+        "runtime_": "Cordova 3.x",
+        "name_": "Windows8",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "InvManNodeApp",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.0.1",
+        "cordovaCLIVersion_": "4.1.2"
+      },
+      "WebApp": {
+        "platform_": "webapp",
+        "runtime_": "W3C",
+        "name_": "WebApp",
+        "preferences_": {},
+        "isActive_": false,
+        "appName_": "InvManNodeApp",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1"
+      },
+      "Firefox": {
+        "platform_": "firefoxos",
+        "runtime_": "W3C on Firefox OS",
+        "name_": "Firefox",
+        "preferences_": {},
+        "isActive_": false,
+        "appName_": "InvManNodeApp",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1"
+      },
+      "Chrome": {
+        "platform_": "chromeos",
+        "runtime_": "W3C on Chrome OS",
+        "name_": "Chrome",
+        "preferences_": {},
+        "isActive_": false,
+        "appName_": "InvManNodeApp",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1"
+      },
+      "Facebook": {
+        "platform_": "facebook",
+        "runtime_": "W3C on Facebook",
+        "name_": "Facebook",
+        "preferences_": {},
+        "isActive_": false,
+        "appName_": "InvManNodeApp",
+        "appID_": "not.yet.specified",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1"
+      }
+    }
+  }
+}

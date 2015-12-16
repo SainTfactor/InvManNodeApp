@@ -7,9 +7,9 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {},
         "org.apache.cordova.device": {},
-        "org.apache.cordova.splashscreen": {}
+        "org.apache.cordova.splashscreen": {},
+        "com.phonegap.plugins.barcodescanner": {}
     },
     "dependent_plugins": {}
 }

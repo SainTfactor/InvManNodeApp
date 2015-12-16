@@ -1,12 +1,12 @@
 {
   "project": {
-    "projectSettingsVersion": "1.2",
+    "projectSettingsVersion": "2.0.0",
     "creationData": {
       "type": "Import",
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "2fcfb202-ee15-4e83-825b-7edc60e1e4e9",
-      "lastModifiedDate": 1442360572198,
+      "lastModifiedDate": 1450222795695,
       "creationDate": 1433285718138
     },
     "sourceDirectory": "www",
@@ -37,24 +37,42 @@
       {
         "id": "org.apache.cordova.device",
         "version": "0.2.13",
-        "selectedState": "Auto",
+        "selectedState": "Included",
         "data": {},
         "paramvals": {},
         "dependsOn": [],
-        "dependedBy": []
+        "dependedBy": [],
+        "originType": "cordova.io",
+        "origin": "org.apache.cordova.device",
+        "permissions": {},
+        "topLevel": true,
+        "checksum": "87180a02",
+        "gitref": "",
+        "name": "Device",
+        "cordovaVersion": ">=3.0.0",
+        "description": "Cordova Device Plugin"
       },
       {
         "id": "org.apache.cordova.splashscreen",
         "version": "0.3.5",
-        "selectedState": "Auto",
+        "selectedState": "Included",
         "data": {},
         "paramvals": {},
         "dependsOn": [],
-        "dependedBy": []
+        "dependedBy": [],
+        "originType": "cordova.io",
+        "origin": "org.apache.cordova.splashscreen",
+        "permissions": {},
+        "topLevel": true,
+        "checksum": "ae76b446",
+        "gitref": "",
+        "name": "Splashscreen",
+        "cordovaVersion": ">=3.0.0",
+        "description": "Cordova Splashscreen Plugin"
       },
       {
         "id": "com.phonegap.plugins.barcodescanner",
-        "version": "",
+        "version": "2.0.1",
         "selectedState": "Included",
         "data": {},
         "paramvals": {},
@@ -64,7 +82,18 @@
         "name": "BarcodeScanner",
         "origin": "com.phonegap.plugins.barcodescanner",
         "originType": "cordova.io",
-        "sourceLocation": ""
+        "sourceLocation": "",
+        "permissions": {
+          "android:name": [
+            "android.permission.CAMERA",
+            "android.permission.FLASHLIGHT"
+          ]
+        },
+        "topLevel": true,
+        "checksum": "b38f9480",
+        "gitref": "",
+        "cordovaVersion": ">=3.0.0",
+        "description": "You can use the BarcodeScanner plugin to scan different types of barcodes (using the device's camera) and get the metadata encoded in them for processing within your application."
       }
     ],
     "serviceMethods": [
@@ -110,11 +139,14 @@
         "isActive_": true,
         "appName_": "InvManNodeApp",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [
           {
             "relPath": "img/icon-ldpi.png",
@@ -161,11 +193,14 @@
         "isActive_": true,
         "appName_": "InvManNodeApp",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -186,11 +221,14 @@
         "isActive_": true,
         "appName_": "InvManNodeApp",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -207,11 +245,14 @@
         "isActive_": true,
         "appName_": "InvManNodeApp",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -227,11 +268,14 @@
         "isActive_": false,
         "appName_": "InvManNodeApp",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -246,11 +290,14 @@
         "isActive_": false,
         "appName_": "InvManNodeApp",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -265,11 +312,14 @@
         "isActive_": false,
         "appName_": "InvManNodeApp",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -284,17 +334,42 @@
         "isActive_": false,
         "appName_": "InvManNodeApp",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "appVersion_": "0.0.1"
+      },
+      "WP81": {
+        "platform_": "wp81",
+        "runtime_": "Cordova 3.x",
+        "name_": "WP81",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "InvManNodeApp",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.0.1",
+        "cordovaCLIVersion_": "5.1.1"
       }
-    }
+    },
+    "testDirectory": "test"
   }
 }

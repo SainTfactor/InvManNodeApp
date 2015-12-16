@@ -1,14 +1,10 @@
 {
   "project": {
-    "projectSettingsVersion": "1.2",
+    "projectSettingsVersion": "2.0.0",
     "initialAutoPluginCount": 0,
     "currentBuildConfiguration": "Android",
     "projectFiles": {},
     "projectDirectories": {},
-    "currentService": {
-      "methodapi": "logCompareRecord",
-      "endPoint": "Get-Part-Info",
-      "service": "_InventoryManagerJsonFeed"
-    }
+    "currentService": {}
   }
 }
